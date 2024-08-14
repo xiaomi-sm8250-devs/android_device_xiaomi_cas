@@ -24,8 +24,6 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    libMegviiFacepp-0.5.2 \
-    libmegface \
     libpiex_shim
 
 # Display
@@ -36,11 +34,6 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_PACKAGES += \
-    xiaomi_umi_hwlevel_default_overlay \
-    xiaomi_umi_hwlevel_p01_overlay \
-    xiaomi_umi_hwlevel_p1_overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -62,4 +55,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/umi/umi-vendor.mk)
+$(call inherit-product, vendor/xiaomi/cas/cas-vendor.mk)
